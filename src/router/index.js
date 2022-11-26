@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Layout from '../layout/Layout.vue'
 import Index from '../view/Index.vue'
+import Position from '../view/Position.vue'
 
 const routes = [
     {
@@ -13,6 +14,21 @@ const routes = [
                 path: '/index',
                 name: 'index',
                 component: Index
+            },
+            {
+                path: '/position',
+                name: 'position',
+                component: Position
+            },
+            {
+                path: '/magazine',
+                name: 'magazine',
+                component: () => import('../view/Magazine.vue')
+            },
+            {
+                path: '/message',
+                name: 'message',
+                component: () => import('../view/Message.vue')
             }
         ]
     }
