@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Layout from '../layout/Layout.vue'
-import Index from '../view/Index.vue'
-import Position from '../view/Position.vue'
+import Index from '../view/index/Index.vue'
+import Position from '../view/position/Position.vue'
 
 const routes = [
     {
@@ -23,12 +23,12 @@ const routes = [
             {
                 path: '/magazine',
                 name: 'magazine',
-                component: () => import('../view/Magazine.vue')
+                component: () => import('../view/magazine/Magazine.vue')
             },
             {
                 path: '/message',
                 name: 'message',
-                component: () => import('../view/Message.vue')
+                component: () => import('../view/message/Message.vue')
             }
         ]
     }

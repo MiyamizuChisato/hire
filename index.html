@@ -1,14 +1,29 @@
 <!DOCTYPE html>
-<html lang='en'>
+<html lang='zh-CN'>
 <head>
     <meta charset='UTF-8' />
     <link rel='icon' type='image/svg+xml' href='/vite.svg' />
     <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-    <link type='text/css' href='./src/assets/style/index.css'>
+    <link rel='stylesheet' type='text/css' href='/src/assets/style/index.css'>
     <title>Vite + Vue</title>
 </head>
+<script>
+    const theme = localStorage.getItem('theme')
+    if (theme === 'dark') {
+        document.documentElement.className = 'dark'
+    } else if (theme === 'light') {
+        document.documentElement.className = 'light'
+    } else {
+        const hours = new Date().getHours()
+        if (hours > 19 || hours < 6) {
+            document.documentElement.className = 'dark'
+        } else {
+            document.documentElement.className = 'light'
+        }
+    }
+</script>
 <body>
-<div id='app'></div>
+<div id='app' bgc-screen transition-duration></div>
 <script type='module' src='/src/main.js'></script>
 </body>
 </html>

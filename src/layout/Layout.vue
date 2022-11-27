@@ -1,5 +1,4 @@
 <script setup>
-
 import MyHeader from './components/MyHeader.vue'
 import MyMain from './components/MyMain.vue'
 import MyFooter from './components/MyFooter.vue'
@@ -9,6 +8,3 @@ import MyFooter from './components/MyFooter.vue'
     <MyMain />
     <MyFooter />
 </template>
-<style scoped>
-
-</style>

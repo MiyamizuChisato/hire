@@ -1,10 +1,13 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@iconify-json/ic': ^1.1.10
+  '@iconify-json/mdi': ^1.1.36
   '@unocss/preset-attributify': ^0.46.4
   '@unocss/preset-icons': ^0.46.4
   '@unocss/preset-uno': ^0.46.4
   '@vitejs/plugin-vue': ^3.2.0
+  '@vueuse/core': ^9.6.0
   aos: ^2.3.4
   axios: ^1.1.3
   jwt-decode: ^3.1.2
@@ -16,9 +19,12 @@ specifiers:
   vuetify: ^3.0.1
 
 dependencies:
+  '@iconify-json/ic': 1.1.10
+  '@iconify-json/mdi': 1.1.36
   '@unocss/preset-attributify': 0.46.4
   '@unocss/preset-icons': 0.46.4
   '@unocss/preset-uno': 0.46.4
+  '@vueuse/core': 9.6.0_vue@3.2.45
   aos: 2.3.4
   axios: 1.1.3
   jwt-decode: 3.1.2
@@ -91,6 +97,18 @@ packages:
     os: [linux]
     requiresBuild: true
     optional: true
+
+  /@iconify-json/ic/1.1.10:
+    resolution: {integrity: sha512-EmyoOv/MHYEZcpRtvU/+PTSd3vGv81bpdaUiLzym3XI7Y8kLMWVGr/rnztgb12Mzwi/hHkwfRq1GgdbyNSVPPQ==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: false
+
+  /@iconify-json/mdi/1.1.36:
+    resolution: {integrity: sha512-3aWCVjDIseO8COo8zPkmxOZUFjdWsvTQQnk6zVrOaJh2K8oKuBznw10FSJZgQM7qAn6S54/oejyqkWfODRZV1Q==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: false
 
   /@iconify/types/2.0.0:
     resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
@@ -179,6 +197,10 @@ packages:
 
   /@types/estree/1.0.0:
     resolution: {integrity: sha512-WulqXMDUTYAXCjZnk6JtIHPigp55cVtDgDrO2gHRwhyJto21+1zbVCtOYB2L1F9w4qCQ0rOGWBnBe0FNTiEJIQ==}
+    dev: false
+
+  /@types/web-bluetooth/0.0.16:
+    resolution: {integrity: sha512-oh8q2Zc32S6gd/j50GowEjKLoOVOwHP/bWVjKJInBwQqdOYMdPrf1oVlelTlyfFK3CKxL1uahMDAr+vy8T7yMQ==}
     dev: false
 
   /@unocss/astro/0.46.4_vite@3.2.3:
@@ -427,6 +449,31 @@ packages:
 
   /@vue/shared/3.2.45:
     resolution: {integrity: sha512-Ewzq5Yhimg7pSztDV+RH1UDKBzmtqieXQlpTVm2AwraoRL/Rks96mvd8Vgi7Lj+h+TH8dv7mXD3FRZR3TUvbSg==}
+
+  /@vueuse/core/9.6.0_vue@3.2.45:
+    resolution: {integrity: sha512-qGUcjKQXHgN+jqXEgpeZGoxdCbIDCdVPz3QiF1uyecVGbMuM63o96I1GjYx5zskKgRI0FKSNsVWM7rwrRMTf6A==}
+    dependencies:
+      '@types/web-bluetooth': 0.0.16
+      '@vueuse/metadata': 9.6.0
+      '@vueuse/shared': 9.6.0_vue@3.2.45
+      vue-demi: 0.13.11_vue@3.2.45
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+      - vue
+    dev: false
+
+  /@vueuse/metadata/9.6.0:
+    resolution: {integrity: sha512-sIC8R+kWkIdpi5X2z2Gk8TRYzmczDwHRhEFfCu2P+XW2JdPoXrziqsGpDDsN7ykBx4ilwieS7JUIweVGhvZ93w==}
+    dev: false
+
+  /@vueuse/shared/9.6.0_vue@3.2.45:
+    resolution: {integrity: sha512-/eDchxYYhkHnFyrb00t90UfjCx94kRHxc7J1GtBCqCG4HyPMX+krV9XJgVtWIsAMaxKVU4fC8NSUviG1JkwhUQ==}
+    dependencies:
+      vue-demi: 0.13.11_vue@3.2.45
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+      - vue
+    dev: false
 
   /anymatch/3.1.2:
     resolution: {integrity: sha512-P43ePfOAIupkguHUycrc4qJ9kz8ZiuOUijaETwX7THt0Y/GNK7v0aa8rY816xWjZ7rJdA5XdMcpVFTKMq+RvWg==}
