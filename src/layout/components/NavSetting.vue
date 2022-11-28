@@ -10,25 +10,26 @@ const darkBtnChange = () => {
 }
 //END====================================主题模式切换//
 
-//START==================================登陆窗口控制//
+//START======================================窗口控制//
 const dialog = ref(false)
 const signup = ref(false)
 const openDialogTrigger = () => {
     dialog.value = true
 }
-const closeDialogTrigger = () => {
+const closeDialogHandler = () => {
     dialog.value = false
 }
-const showSignUpTrigger = () => {
+const showSignUpHandler = () => {
     signup.value = true
 }
-const showSignInTrigger = () => {
+const showSignInHandler = () => {
     signup.value = false
 }
+//END=======================================窗口控制//
 </script>
 <template>
     <div right='30' position='absolute'>
-        <v-btn @click='darkBtnChange();themeChangeTrigger()' m='x-4' size='36' bgc-transparent icon flat>
+        <v-btn @click='darkBtnChange(); themeChangeTrigger()' m='x-4' size='36' bgc-transparent icon flat>
             <span v-if='darkBtn' i-ic-round-dark-mode color-strong></span>
             <span v-else i-ic-round-light-mode color-strong></span>
         </v-btn>
@@ -37,7 +38,7 @@ const showSignInTrigger = () => {
         </v-btn>
     </div>
     <v-dialog v-model='dialog' transition='dialog-bottom-transition' flex-center>
-        <sign-up v-if='signup' />
-        <sign-in v-else />
+        <sign-up @close-dialog="closeDialogHandler" @nav-sign-in="showSignInHandler" v-if='signup' />
+        <sign-in @close-dialog="closeDialogHandler" @nav-sign-up="showSignUpHandler" v-else />
     </v-dialog>
 </template>

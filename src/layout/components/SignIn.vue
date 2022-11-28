@@ -1,6 +1,14 @@
 <script setup>
 import { reactive } from 'vue'
-
+//START===================================窗口控制//
+const emits = defineEmits(['close-dialog', 'nav-sign-up'])
+const closeDialogTrigger = () => {
+    emits('close-dialog')
+}
+const navToSignUpTrigger = () => {
+    emits('nav-sign-up')
+}
+//START===================================窗口控制//
 const user = reactive({
     email: '',
     password: ''
@@ -9,13 +17,13 @@ const user = reactive({
 <template>
     <div shadow='lg' w='110' p='x-6' rounded='2' color-normal margin-center bgc-screen>
         <div m='y-4'>
-            <v-btn size='small' bgc-transparent flat icon>
+            <v-btn @click="closeDialogTrigger" size='small' bgc-transparent flat icon>
                 <i text='8' i-mdi-arrow-left-bold-circle bgc-danger />
             </v-btn>
         </div>
         <div flex-between>
             <div font='600' text='8' color-strong>欢迎回来，</div>
-            <v-btn variant='tonal' bgc-warning>
+            <v-btn @click='navToSignUpTrigger' variant='tonal' bgc-warning>
                 <span color-light>注 册</span>
             </v-btn>
         </div>

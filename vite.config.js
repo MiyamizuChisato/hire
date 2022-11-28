@@ -45,7 +45,7 @@ export default defineConfig({
                     screen: {
                         light: '#f6f6f6',
                         dark: '#202123'
-                    }
+                    },
                 }
             },
             shortcuts: [
@@ -57,7 +57,8 @@ export default defineConfig({
                     'color-strong': '!text-strong-light !dark:text-strong-dark',
                     'color-normal': '!text-normal-light !dark:text-normal-dark',
                     'color-secondary': '!text-secondary-light !dark:text-secondary-dark',
-                    'color-disable': '!text-disable-light !dark:text-disable-dark'
+                    'color-disable': '!text-disable-light !dark:text-disable-dark',
+                    'color-light': '!text-light-50'
                 },
                 {
                     'bgc-primary': '!bg-primary !dark:bg-primary',
@@ -68,6 +69,7 @@ export default defineConfig({
                     'bgc-strong': '!bg-strong-light !dark:bg-strong-dark',
                     'bgc-normal': '!bg-normal-light !dark:bg-normal-dark',
                     'bgc-secondary': '!bg-secondary-light !dark:bg-secondary-dark',
+                    'bgc-container': '!bg-white !dark:bg-black',
                     'bgc-transparent': '!bg-transparent'
                 },
                 {
