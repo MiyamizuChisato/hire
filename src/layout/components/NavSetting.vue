@@ -37,8 +37,8 @@ const showSignInHandler = () => {
             <span color-light>登陆</span>
         </v-btn>
     </div>
-    <v-dialog v-model='dialog' transition='dialog-bottom-transition' flex-center>
-        <sign-up @close-dialog="closeDialogHandler" @nav-sign-in="showSignInHandler" v-if='signup' />
-        <sign-in @close-dialog="closeDialogHandler" @nav-sign-up="showSignUpHandler" v-else />
+    <v-dialog v-model='dialog' transition='dialog-bottom-transition' persistent flex-center>
+        <sign-up @close-dialog='closeDialogHandler' @nav-sign-in='showSignInHandler' v-if='signup' />
+        <sign-in @close-dialog='closeDialogHandler' @nav-sign-up='showSignUpHandler' v-else />
     </v-dialog>
 </template>

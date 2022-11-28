@@ -46,6 +46,10 @@ export default defineConfig({
                         light: '#f6f6f6',
                         dark: '#202123'
                     },
+                    container: {
+                        light: '#ffffff',
+                        dark: '#2f3133'
+                    }
                 }
             },
             shortcuts: [
@@ -69,7 +73,7 @@ export default defineConfig({
                     'bgc-strong': '!bg-strong-light !dark:bg-strong-dark',
                     'bgc-normal': '!bg-normal-light !dark:bg-normal-dark',
                     'bgc-secondary': '!bg-secondary-light !dark:bg-secondary-dark',
-                    'bgc-container': '!bg-white !dark:bg-black',
+                    'bgc-container': '!bg-container-light !dark:bg-container-dark',
                     'bgc-transparent': '!bg-transparent'
                 },
                 {

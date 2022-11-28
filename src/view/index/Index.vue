@@ -19,6 +19,33 @@ import WorkCard from '../../components/WorkCard.vue';
             <v-col cols="4">
                 <work-card />
             </v-col>
+            <v-col cols='4'>
+                <work-card />
+            </v-col>
+            <v-col cols='4'>
+                <work-card />
+            </v-col>
+            <v-col cols='4'>
+                <work-card />
+            </v-col>
+            <v-col cols='4'>
+                <work-card />
+            </v-col>
+            <v-col cols='4'>
+                <work-card />
+            </v-col>
+            <v-col cols='4'>
+                <work-card />
+            </v-col>
+            <v-col cols='4'>
+                <work-card />
+            </v-col>
+            <v-col cols='4'>
+                <work-card />
+            </v-col>
+            <v-col cols='4'>
+                <work-card />
+            </v-col>
         </v-row>
     </div>
 </template>
