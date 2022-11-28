@@ -33,8 +33,16 @@ const user = reactive({
     <div text='5'>请输入以下信息进行注册</div>
     <div m='y-4'>
       <v-form>
-        <v-text-field v-model='user.email' label='邮箱' />
-        <v-text-field v-model='user.code' label='验证码'></v-text-field>
+        <v-text-field v-model='user.email' label='邮箱'>
+          <template #append-inner>
+            <v-btn bgc-primary>
+              <span color-light>
+                发送
+              </span>
+            </v-btn>
+          </template>
+        </v-text-field>
+        <v-text-field v-model='user.code' label='验证码' />
         <v-text-field v-model='user.password' label='密码' />
         <v-text-field v-model='user.nickname' label='昵称' />
         <v-btn variant='tonal' bgc-success block>

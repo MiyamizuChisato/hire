@@ -10,7 +10,13 @@ import WorkCard from '../../components/WorkCard.vue';
         <my-carousels />
         <my-label label='为你推荐' />
         <v-row>
-            <v-col flex-center>
+            <v-col cols="4">
+                <work-card />
+            </v-col>
+            <v-col cols="4">
+                <work-card />
+            </v-col>
+            <v-col cols="4">
                 <work-card />
             </v-col>
         </v-row>
