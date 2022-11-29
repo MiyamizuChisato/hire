@@ -92,6 +92,11 @@ export default defineConfig({
                     'position': 'absolute',
                     'left': '50%',
                     'transform': 'translateX(-50%)'
+                }],
+                ['one-line', {
+                    overflow: 'hidden',
+                    'text-overflow': 'ellipsis',
+                    'white-space': 'nowrap'
                 }]
             ]
         })
