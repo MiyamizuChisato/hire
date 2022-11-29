@@ -2,7 +2,7 @@
 
 </script>
 <template>
-    <div p='3' rounded='2' bgc-container>
+    <div p='3' rounded='2' shadow='md' bgc-container>
         <div flex-end color-primary>
             <span cursor='pointer' v-if='true'>编辑</span>
             <span cursor='pointer' v-else>完成</span>

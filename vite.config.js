@@ -83,8 +83,9 @@ export default defineConfig({
                     'flex-end': '!display-flex !justify-end !items-center'
                 },
                 {
-                    'margin-center': 'm-x-auto',
-                    'transition-duration': 'transition-duration-333ms'
+                    'margin-center': '!m-x-auto',
+                    'transition-duration': '!transition-duration-333ms',
+                    'transition-none': '!transition-duration-0ms'
                 }
             ],
             rules: [
