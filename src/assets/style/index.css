@@ -4,10 +4,6 @@
     -webkit-font-smoothing: antialiased;
 }
 
-#main {
-    min-height: 200vh;
-}
-
 html {
     overflow-y: scroll;
 }

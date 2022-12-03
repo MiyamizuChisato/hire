@@ -2,7 +2,7 @@
 
 </script>
 <template>
-    <footer transition-duration bgc-screen>
+    <footer>
         footer
     </footer>
 </template>
