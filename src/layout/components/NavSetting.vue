@@ -1,18 +1,22 @@
 <script setup>
 import { getTheme, themeChangeTrigger } from '../../utils/theme.js'
-import { ref } from 'vue'
+import { computed, inject, ref } from 'vue'
 import SignIn from './SignIn.vue'
 import SignUp from './SignUp.vue'
-//START==================================主题模式切换//
+import { useUserStore } from '../../store/userStore.js'
+import Avatar from '../../components/Avatar.vue'
+import { useRouter } from 'vue-router'
+
+const userStore = useUserStore()
 const darkBtn = ref(getTheme() === 'light')
 const darkBtnChange = () => {
     darkBtn.value = !darkBtn.value
 }
-//END====================================主题模式切换//
-
-//START======================================窗口控制//
+const router = useRouter()
+const cos = inject('cos')
 const dialog = ref(false)
 const signup = ref(false)
+const user = computed(() => userStore.user)
 const openDialogTrigger = () => {
     dialog.value = true
 }
@@ -25,15 +29,27 @@ const showSignUpHandler = () => {
 const showSignInHandler = () => {
     signup.value = false
 }
-//END=======================================窗口控制//
+const go = (path) => {
+    if (path !== '' || path !== null) {
+        router.push(path)
+    }
+}
 </script>
 <template>
     <div right='30' position='absolute'>
-        <v-btn @click='darkBtnChange(); themeChangeTrigger()' m='x-4' size='36' bgc-transparent icon flat>
-            <span v-if='darkBtn' i-ic-round-dark-mode color-strong></span>
+        <v-btn @click='darkBtnChange(); themeChangeTrigger()' m='x-2' size='42' bgc-transparent icon flat>
+            <span v-if='darkBtn' text='8' i-ic-round-dark-mode color-strong></span>
             <span v-else i-ic-round-light-mode color-strong></span>
         </v-btn>
-        <v-btn @click='openDialogTrigger' m='x-4' bgc-primary flat>
+        <template v-if='user'>
+            <v-btn variant='text' m='x-2' size='42px' icon>
+                <avatar width='32px' height='32px' :image='cos+user.avatar' />
+            </v-btn>
+            <v-btn @click='go("/publish/position")' m='x-4' bgc-primary flat>
+                <span color-light>招聘</span>
+            </v-btn>
+        </template>
+        <v-btn @click='openDialogTrigger' m='x-2' bgc-primary flat v-else>
             <span color-light>登陆</span>
         </v-btn>
     </div>

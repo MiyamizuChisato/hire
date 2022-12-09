@@ -8,6 +8,9 @@ html {
     overflow-y: scroll;
 }
 
+html.dark {
+}
+
 :root {
     overflow-y: auto;
     overflow-x: hidden;

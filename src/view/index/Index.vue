@@ -1,6 +1,6 @@
 <script setup>
 
-import MyLabel from './components/MyLabel.vue'
+import MyLabel from '../../components/MyLabel.vue'
 import MyCarousels from './components/MyCarousels.vue'
 import WorkCard from '../../components/WorkCard.vue'
 </script>

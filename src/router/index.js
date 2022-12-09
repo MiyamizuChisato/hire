@@ -31,9 +31,19 @@ const routes = [
                 component: () => import('../view/message/Message.vue')
             },
             {
-                path: '/user/:id',
+                path: '/user',
                 name: 'user',
                 component: () => import('../view/user/User.vue')
+            },
+            {
+                path: '/publish/position',
+                name: 'publish.position',
+                component: () => import('../view/publish/PublishPosition.vue')
+            },
+            {
+                path: '/publish/company',
+                name: 'publish.company',
+                component: () => import('../view/publish/PublishCompany.vue')
             }
         ]
     }
